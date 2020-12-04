@@ -1,0 +1,11 @@
+<div class="contents row">
+  <div class="container">
+    <h3>今日学んだこと</h3>
+    <%= form_with(model: @tweet, local: true) do |form| %>
+      <%= form.text_field :title, placeholder: "title", maxlength:"40", class:"items-text", id:"item-name" %>
+      <%# <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %> 
+      <%= form.text_area :text, placeholder: "text（500文字まで）", rows: "10",maxlength:"500" %>
+      <%= form.submit "アウトプット完了" %>
+    <% end %>
+  </div>
+</div>
